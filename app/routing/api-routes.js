@@ -18,7 +18,7 @@ module.exports = function (app) {
 
         //take the result of the user's survey POST and parse it.
         var userData = req.body;
-        var userScores = userData.scores;
+        var userScores = userData.userData.scores;
 
         console.log(userData);
         console.log(userScores)
@@ -33,7 +33,7 @@ module.exports = function (app) {
           //  console.log(friends[i]);
             totalDifference = 0;
 
-            console.log(friends[i].score.length)
+            console.log(friends[i].scores.length)
             //then loop through all ths scores of each friend. Nested for loop:
             for (var j = 0; j < friends[i].scores.length; j++) {
                 // calculate the difference between the scores and sum them into the totalDifference
